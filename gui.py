@@ -189,11 +189,11 @@ class VoiceCleanerApp(ctk.CTk):
         self._fig = Figure(figsize=(7, 4), dpi=96, facecolor="#2b2b2b")
         self._ax_in = self._fig.add_subplot(211)
         self._ax_out = self._fig.add_subplot(212)
-        self._reset_axes()
 
         self._mpl_canvas = FigureCanvasTkAgg(self._fig, master=wave_frame)
         self._mpl_canvas.get_tk_widget().grid(
             row=1, column=0, sticky="nsew", padx=8, pady=(0, 8))
+        self._reset_axes()
 
         # ── Painel de log ─────────────────────────────────────────────────
         log_frame = ctk.CTkFrame(main)
