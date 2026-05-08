@@ -5,7 +5,7 @@ python create_icon.py
 if errorlevel 1 ( echo ERRO ao gerar icone. & pause & exit /b 1 )
 
 echo Compilando executavel...
-pyinstaller --onefile --windowed --name "VoiceCleaner" --icon "icon.ico" ^
+python -m PyInstaller --onefile --windowed --name "VoiceCleaner" --icon "icon.ico" ^
   --add-data "icon.ico;." ^
   --collect-data customtkinter ^
   --collect-all noisereduce ^
